@@ -23,7 +23,7 @@ window/stretch/mode="viewport"
 
 [dotnet]
 
-project/assembly_name="Silksong Trobio Fight Nes"
+project/assembly_name="Silksong Trobio Fight SNES"
 
 [physics]
 
