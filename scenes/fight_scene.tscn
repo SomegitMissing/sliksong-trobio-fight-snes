@@ -46,7 +46,12 @@ autoplay = "default"
 frame = 1
 frame_progress = 0.89520246
 
-[node name="Sprite2D" type="Sprite2D" parent="Stage" unique_id=91025481]
+[node name="Statue" type="Sprite2D" parent="Stage" unique_id=675763375]
+z_index = -2
+position = Vector2(128, 149)
+texture = ExtResource("3_gksjr")
+
+[node name="Borders" type="Sprite2D" parent="Stage" unique_id=91025481]
 position = Vector2(127, 121)
 texture = ExtResource("1_p8b18")
 
@@ -64,11 +69,6 @@ shape = SubResource("RectangleShape2D_keksv")
 [node name="Right" type="CollisionShape2D" parent="Stage/StaticBody2D" unique_id=1205234988]
 position = Vector2(247.5, 116)
 shape = SubResource("RectangleShape2D_keksv")
-
-[node name="Statue" type="Sprite2D" parent="Stage" unique_id=675763375]
-z_index = -2
-position = Vector2(128, 149)
-texture = ExtResource("3_gksjr")
 
 [node name="FloorThingyLeft" type="Sprite2D" parent="." unique_id=124333921]
 z_index = 2

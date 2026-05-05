@@ -150,18 +150,18 @@ z_index = 1
 collision_layer = 0
 script = ExtResource("1_8tbun")
 max_speed = 70.0
-fall_acceleration = 500.0
-jump_force = 220.0
+fall_acceleration = 350.0
+jump_force = 170.0
 state_machine = NodePath("StateMachine")
 sprite = NodePath("AnimatedSprite2D")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=626324491]
 position = Vector2(-1, 0)
 sprite_frames = SubResource("SpriteFrames_3ucwp")
-animation = &"AirAttack"
+animation = &"Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1847251909]
-position = Vector2(1, 6)
+position = Vector2(0, 6)
 shape = SubResource("RectangleShape2D_3ucwp")
 
 [node name="StateMachine" type="LimboHSM" parent="." unique_id=601931097 node_paths=PackedStringArray("first_state")]
