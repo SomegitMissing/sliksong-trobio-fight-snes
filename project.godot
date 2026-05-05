@@ -11,7 +11,9 @@ config_version=5
 [application]
 
 config/name="Silksong Trobio Fight SNES"
+run/main_scene="uid://dk0p6jriks2ol"
 config/features=PackedStringArray("4.6", "GL Compatibility")
+run/max_fps=70
 config/icon="res://icon.svg"
 
 [debug]
