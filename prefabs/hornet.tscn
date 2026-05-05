@@ -150,8 +150,8 @@ z_index = 1
 collision_layer = 0
 script = ExtResource("1_8tbun")
 max_speed = 70.0
-fall_acceleration = 350.0
-jump_force = 170.0
+fall_acceleration = 500.0
+jump_force = 220.0
 state_machine = NodePath("StateMachine")
 sprite = NodePath("AnimatedSprite2D")
 
