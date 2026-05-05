@@ -81,4 +81,4 @@ position = Vector2(200, 191)
 texture = ExtResource("3_nff5x")
 
 [node name="Hornet" parent="." unique_id=1022708992 instance=ExtResource("5_7aqs0")]
-position = Vector2(39, 181)
+position = Vector2(40, 175)
