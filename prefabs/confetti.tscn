@@ -1,0 +1,106 @@
+[gd_scene format=3 uid="uid://ci5kh40f0k7dm"]
+
+[ext_resource type="Texture2D" uid="uid://baprf4c62tn3b" path="res://sprites/confetti.png" id="1_s52ti"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s52ti"]
+atlas = ExtResource("1_s52ti")
+region = Rect2(0, 0, 16, 39)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ytach"]
+atlas = ExtResource("1_s52ti")
+region = Rect2(16, 0, 16, 39)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_84noe"]
+atlas = ExtResource("1_s52ti")
+region = Rect2(32, 0, 16, 39)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bx7sj"]
+atlas = ExtResource("1_s52ti")
+region = Rect2(16, 0, 16, 39)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n82g3"]
+atlas = ExtResource("1_s52ti")
+region = Rect2(48, 0, 16, 39)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ymuhk"]
+atlas = ExtResource("1_s52ti")
+region = Rect2(64, 0, 16, 39)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b30um"]
+atlas = ExtResource("1_s52ti")
+region = Rect2(80, 0, 16, 39)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ww40p"]
+atlas = ExtResource("1_s52ti")
+region = Rect2(96, 0, 16, 39)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8g0s5"]
+atlas = ExtResource("1_s52ti")
+region = Rect2(112, 0, 16, 39)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6jrit"]
+atlas = ExtResource("1_s52ti")
+region = Rect2(128, 0, 16, 39)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4pcdq"]
+atlas = ExtResource("1_s52ti")
+region = Rect2(144, 0, 16, 39)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_unp20"]
+atlas = ExtResource("1_s52ti")
+region = Rect2(0, 0, 16, 39)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_icvsy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s52ti")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ytach")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_84noe")
+}],
+"loop": true,
+"name": &"Loop",
+"speed": 11.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bx7sj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n82g3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ymuhk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b30um")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ww40p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8g0s5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6jrit")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4pcdq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_unp20")
+}],
+"loop": false,
+"name": &"Vanishing",
+"speed": 11.0
+}]
+
+[node name="Confetti" type="AnimatedSprite2D" unique_id=67623920]
+sprite_frames = SubResource("SpriteFrames_icvsy")
+animation = &"Loop"
+frame_progress = 0.718617
+offset = Vector2(0, -20)

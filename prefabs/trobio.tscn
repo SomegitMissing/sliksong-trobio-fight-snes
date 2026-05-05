@@ -1,0 +1,80 @@
+[gd_scene format=3 uid="uid://rp7jh6jpqeq"]
+
+[ext_resource type="Texture2D" uid="uid://dl1ifbgf5j0iq" path="res://sprites/trobio.png" id="1_nlcia"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_disew"]
+atlas = ExtResource("1_nlcia")
+region = Rect2(102, 0, 34, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_27why"]
+atlas = ExtResource("1_nlcia")
+region = Rect2(136, 0, 34, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nlcia"]
+atlas = ExtResource("1_nlcia")
+region = Rect2(0, 0, 34, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_65rby"]
+atlas = ExtResource("1_nlcia")
+region = Rect2(34, 0, 34, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_to7me"]
+atlas = ExtResource("1_nlcia")
+region = Rect2(68, 0, 34, 40)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ah3xe"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_disew")
+}],
+"loop": true,
+"name": &"BeHold",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_27why")
+}],
+"loop": true,
+"name": &"Entrance",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nlcia")
+}],
+"loop": true,
+"name": &"Fly",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_65rby")
+}],
+"loop": true,
+"name": &"Muaw",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_to7me")
+}],
+"loop": true,
+"name": &"Stand",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ah3xe"]
+size = Vector2(10, 26)
+
+[node name="Trobio" type="CharacterBody2D" unique_id=1976074301]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=933622218]
+sprite_frames = SubResource("SpriteFrames_ah3xe")
+animation = &"Stand"
+autoplay = "Stand"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1577443496]
+position = Vector2(2, 7)
+shape = SubResource("RectangleShape2D_ah3xe")

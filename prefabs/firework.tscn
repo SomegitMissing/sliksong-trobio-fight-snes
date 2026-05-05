@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://dduoiy0ou7xwb"]
+
+[ext_resource type="Texture2D" uid="uid://g2txonkce1y" path="res://sprites/firework.png" id="1_kwrub"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_07a3f"]
+atlas = ExtResource("1_kwrub")
+region = Rect2(0, 0, 43, 46)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qko0y"]
+atlas = ExtResource("1_kwrub")
+region = Rect2(43, 0, 43, 46)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_efe5l"]
+atlas = ExtResource("1_kwrub")
+region = Rect2(86, 0, 43, 46)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pfhck"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_07a3f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qko0y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_efe5l")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="Firework" type="AnimatedSprite2D" unique_id=690879092]
+sprite_frames = SubResource("SpriteFrames_pfhck")
+autoplay = "default"
+frame_progress = 0.3686019

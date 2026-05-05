@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://kh4vw2eqvnpe"]
+
+[ext_resource type="Texture2D" uid="uid://bv3xwiwcqv1h0" path="res://sprites/bg_fireworks.png" id="1_1vqip"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cxoy3"]
+atlas = ExtResource("1_1vqip")
+region = Rect2(0, 0, 187, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1gtjj"]
+atlas = ExtResource("1_1vqip")
+region = Rect2(0, 44, 187, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i1yym"]
+atlas = ExtResource("1_1vqip")
+region = Rect2(0, 88, 187, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6d85v"]
+atlas = ExtResource("1_1vqip")
+region = Rect2(0, 132, 187, 44)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i0lbi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cxoy3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1gtjj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i1yym")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6d85v")
+}],
+"loop": false,
+"name": &"default",
+"speed": 12.0
+}]
+
+[node name="BGFireworks" type="AnimatedSprite2D" unique_id=984083572]
+sprite_frames = SubResource("SpriteFrames_i0lbi")
+autoplay = "default"

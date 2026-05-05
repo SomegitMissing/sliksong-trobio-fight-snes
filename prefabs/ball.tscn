@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://dw5gwoai2me7b"]
+
+[ext_resource type="Texture2D" uid="uid://s1h2tlxuwl37" path="res://sprites/ball.png" id="1_10x6a"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ucka5"]
+radius = 6.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f6quk"]
+atlas = ExtResource("1_10x6a")
+region = Rect2(0, 0, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pfhbp"]
+atlas = ExtResource("1_10x6a")
+region = Rect2(12, 0, 12, 12)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5nmth"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f6quk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pfhbp")
+}],
+"loop": true,
+"name": &"default",
+"speed": 7.0
+}]
+
+[node name="Ball" type="RigidBody2D" unique_id=379297985]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=458568288]
+shape = SubResource("CircleShape2D_ucka5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1467694299]
+sprite_frames = SubResource("SpriteFrames_5nmth")
+autoplay = "default"

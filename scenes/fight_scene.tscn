@@ -1,3 +1,84 @@
 [gd_scene format=3 uid="uid://dk0p6jriks2ol"]
 
+[ext_resource type="Texture2D" uid="uid://d3kv0t5gl725n" path="res://sprites/stars.png" id="1_keksv"]
+[ext_resource type="Texture2D" uid="uid://b10yao5nd1dan" path="res://sprites/stage.png" id="1_p8b18"]
+[ext_resource type="Texture2D" uid="uid://ddkbsmbc1pl8t" path="res://sprites/statue.png" id="3_gksjr"]
+[ext_resource type="Texture2D" uid="uid://eqxkwo376auy" path="res://sprites/floor_thingy.png" id="3_nff5x"]
+[ext_resource type="PackedScene" uid="uid://co06303cj82ol" path="res://prefabs/hornet.tscn" id="5_7aqs0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nff5x"]
+atlas = ExtResource("1_keksv")
+region = Rect2(0, 0, 187, 53)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gksjr"]
+atlas = ExtResource("1_keksv")
+region = Rect2(0, 53, 187, 53)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7aqs0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nff5x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gksjr")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p8b18"]
+size = Vector2(255, 24)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_keksv"]
+size = Vector2(16, 152)
+
 [node name="FightScene" type="Node2D" unique_id=341962660]
+
+[node name="Stage" type="Node2D" parent="." unique_id=103565303]
+metadata/_edit_lock_ = true
+
+[node name="Stars" type="AnimatedSprite2D" parent="Stage" unique_id=436383613]
+position = Vector2(126.5, 65.5)
+sprite_frames = SubResource("SpriteFrames_7aqs0")
+autoplay = "default"
+frame = 1
+frame_progress = 0.89520246
+
+[node name="Sprite2D" type="Sprite2D" parent="Stage" unique_id=91025481]
+position = Vector2(127, 121)
+texture = ExtResource("1_p8b18")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Stage" unique_id=579186797]
+collision_mask = 0
+
+[node name="Bottom" type="CollisionShape2D" parent="Stage/StaticBody2D" unique_id=1501598169]
+position = Vector2(127.5, 204)
+shape = SubResource("RectangleShape2D_p8b18")
+
+[node name="Left" type="CollisionShape2D" parent="Stage/StaticBody2D" unique_id=1780540447]
+position = Vector2(8, 116)
+shape = SubResource("RectangleShape2D_keksv")
+
+[node name="Right" type="CollisionShape2D" parent="Stage/StaticBody2D" unique_id=1205234988]
+position = Vector2(247.5, 116)
+shape = SubResource("RectangleShape2D_keksv")
+
+[node name="Statue" type="Sprite2D" parent="Stage" unique_id=675763375]
+z_index = -2
+position = Vector2(128, 149)
+texture = ExtResource("3_gksjr")
+
+[node name="FloorThingyLeft" type="Sprite2D" parent="." unique_id=124333921]
+z_index = 2
+position = Vector2(56, 191)
+texture = ExtResource("3_nff5x")
+
+[node name="FloorThingyRight" type="Sprite2D" parent="." unique_id=1548754426]
+z_index = 2
+position = Vector2(200, 191)
+texture = ExtResource("3_nff5x")
+
+[node name="Hornet" parent="." unique_id=1022708992 instance=ExtResource("5_7aqs0")]
+position = Vector2(39, 181)
