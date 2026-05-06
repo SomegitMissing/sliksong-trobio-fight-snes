@@ -34,4 +34,3 @@ animations = [{
 [node name="Firework" type="AnimatedSprite2D" unique_id=690879092]
 sprite_frames = SubResource("SpriteFrames_pfhck")
 autoplay = "default"
-frame_progress = 0.3686019

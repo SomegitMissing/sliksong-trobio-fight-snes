@@ -25,7 +25,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
-"speed": 1.0
+"speed": 2.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p8b18"]
@@ -43,8 +43,6 @@ metadata/_edit_lock_ = true
 position = Vector2(126.5, 65.5)
 sprite_frames = SubResource("SpriteFrames_7aqs0")
 autoplay = "default"
-frame = 1
-frame_progress = 0.89520246
 
 [node name="Statue" type="Sprite2D" parent="Stage" unique_id=675763375]
 z_index = -2

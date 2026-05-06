@@ -101,6 +101,5 @@ animations = [{
 
 [node name="Confetti" type="AnimatedSprite2D" unique_id=67623920]
 sprite_frames = SubResource("SpriteFrames_icvsy")
-animation = &"Loop"
-frame_progress = 0.718617
+animation = &"Vanishing"
 offset = Vector2(0, -20)
